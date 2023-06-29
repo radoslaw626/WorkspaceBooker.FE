@@ -5,9 +5,11 @@ import { motion } from 'framer-motion';
 import MainContainer from '../layout/MainContainer';
 import WorkspaceItem from '../components/InvoiceItem';
 import FilterDropdown from '../components/FilterDropdown';
-import NoInvoice from '../components/NoWorkspaces';
+import NoWorkspaces from '../components/NoWorkspaces';
+import Button from '../components/Button';
 
 import { AppContext } from '../context/AppContext';
+import { OPEN_DRAWER } from '../actions';
 import { workspacesCountText } from '../utils/utils';
 
 import deviceSize from '../styles/breakpoints';
@@ -51,6 +53,19 @@ const WorkspacesList = styled.ul`
   list-style: none;
 `;
 
+const NewBookingButton = styled(Button)`
+  span {
+    display: none;
+  }
+
+  @media screen and (min-width: ${deviceSize.md}) {
+    span {
+      display: revert;
+    }
+  }
+`;
+
+
 const workspaceListVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -77,10 +92,13 @@ function Home() {
     <MainContainer>
       <HomeHeader>
         <div>
-          <Heading>Workspaces</Heading>
+          <Heading>Workspaces Bookings</Heading>
           <WorkspacesCount>{workspacesCountText(filteredWorkspaces.length)}</WorkspacesCount>
         </div>
         <FilterDropdown />
+        <NewBookingButton icon={true} onClick={() => dispatch({ type: OPEN_DRAWER })}>
+          New <span>Booking</span>
+        </NewBookingButton>
       </HomeHeader>
       {filteredWorkspaces.length > 0 ? (
         <WorkspacesList
@@ -95,7 +113,7 @@ function Home() {
           ))}
         </WorkspacesList>
       ) : (
-        <NoInvoice />
+        <NoWorkspaces />
       )}
     </MainContainer>
   );

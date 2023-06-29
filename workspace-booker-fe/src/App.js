@@ -7,10 +7,11 @@ import { AnimatePresence } from 'framer-motion';
 import GlobalStyle from './styles/globalStyles';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
-import ErrorBoundary from "./ErrorBoundary";
+import Drawer from './components/Drawer';
+import InvoiceFormContainer from './components/InvoiceForm/InvoiceFormContainer';
 
 import { lightTheme, darkTheme } from './styles/theme';
-
+import ErrorBoundary from "./ErrorBoundary";
 import { AppContext } from './context/AppContext';
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
                         <Route path="/" element={<Home />} />
                     </Routes>
                 </AnimatePresence>
+                <Drawer isOpen={isDrawerOpen}>
+                    <InvoiceFormContainer />
+                </Drawer>
             </ThemeProvider>
             </ErrorBoundary>
         </div>

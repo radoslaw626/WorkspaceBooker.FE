@@ -2,6 +2,12 @@ import {
   FILTER_WORKSPACES,
   OPEN_DRAWER,
   CLOSE_DRAWER,
+  ADD_WORKSPACE_BOOKING,
+  DELETE_WORKSPACE_BOOKING,
+  MARK_WORKSPACE_BOOKED,
+  EDIT_WORKSPACE_BOOKING,
+  UPDATE_WORKSPACE_BOOKING,
+  CANCEL_BOOKING_EDIT,
   ENABLE_DARK_MODE,
   DISABLE_DARK_MODE,
   LOAD_WORKSPACES_DATA,
@@ -26,7 +32,55 @@ const reducer = (state, action) => {
     case CLOSE_DRAWER: {
       return { ...state, isDrawerOpen: false };
     }
-
+    case ADD_WORKSPACE_BOOKING: {
+      const workspaces = [...state.workspaces, action.payload];
+      return { ...state, workspaces, filteredWorkspaces: workspaces };
+    }
+    case DELETE_WORKSPACE_BOOKING: {
+      const newWorkspaces = state.workspaces.filter((workspace) => workspace.id !== action.payload);
+      return { ...state, newWorkspaces: newWorkspaces, filteredWorkspaces: newWorkspaces };
+    }
+    case MARK_WORKSPACE_BOOKED: {
+      const workspaces = state.workspaces.map((workspace) => {
+        if (workspace.id === action.payload) {
+          return { ...workspace, status: 'paid' };
+        }
+        return workspace;
+      });
+      return { ...state, workspaces, filteredWorkspaces: workspaces };
+    }
+    case EDIT_WORKSPACE_BOOKING: {
+      return {
+        ...state,
+        isDrawerOpen: true,
+        isEditingInvoice: true,
+        editWorkspaceID: action.payload
+      };
+    }
+    case UPDATE_WORKSPACE_BOOKING: {
+      const newWorkspaces = state.workspaces.map((workspace) => {
+        if (workspace.id === state.editInvoiceID) {
+          return { ...action.payload };
+        }
+        return workspace;
+      });
+      return {
+        ...state,
+        invoices: newWorkspaces,
+        filteredWorkspaces: newWorkspaces,
+        isEditingInvoice: false,
+        editInvoiceID: null,
+        isDrawerOpen: false
+      };
+    }
+    case CANCEL_BOOKING_EDIT: {
+      return {
+        ...state,
+        isEditingInvoice: false,
+        editInvoiceID: null,
+        isDrawerOpen: false
+      };
+    }
     case LOAD_WORKSPACES_DATA: {
       return { ...action.payload };
     }
