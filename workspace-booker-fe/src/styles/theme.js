@@ -81,8 +81,8 @@ const lightTheme = {
     total: '#888EB0'
   },
   status: {
-    pending: '#ff8f00',
-    paid: '#33D69F',
+    booked: '#ff0000',
+    free: '#33D69F',
     draft: '#373B53'
   },
   filterDropdown: {
@@ -248,8 +248,8 @@ const darkTheme = {
     total: '#DFE3FA'
   },
   status: {
-    pending: '#ff8f00',
-    paid: '#33D69F',
+    booked: '#ff0000',
+    free: '#33D69F',
     draft: '#DFE3FA'
   },
   filterDropdown: {

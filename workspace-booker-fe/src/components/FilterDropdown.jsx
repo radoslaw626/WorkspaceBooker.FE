@@ -93,11 +93,11 @@ function FilterDropdown() {
                   />
                   <CustomRadio
                     name="workspaces-filter"
-                    id="pending"
-                    label="Pending"
-                    value="pending"
-                    checked={filter === 'pending'}
-                    aria-checked={filter === 'pending' ? true : false}
+                    id="booked"
+                    label="Booked"
+                    value="booked"
+                    checked={filter === 'booked'}
+                    aria-checked={filter === 'booked' ? true : false}
                     onChange={onChange}
                   />
                   <CustomRadio
@@ -111,11 +111,11 @@ function FilterDropdown() {
                   />
                   <CustomRadio
                     name="workspaces-filter"
-                    id="paid"
-                    label="Paid"
-                    value="paid"
-                    checked={filter === 'paid'}
-                    aria-checked={filter === 'paid' ? true : false}
+                    id="free"
+                    label="Free"
+                    value="free"
+                    checked={filter === 'free'}
+                    aria-checked={filter === 'free' ? true : false}
                     onChange={onChange}
                   />
                 </div>
