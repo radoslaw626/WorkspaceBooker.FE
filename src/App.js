@@ -15,6 +15,7 @@ import WorkspaceBookingFormContainer from './components/WorkspaceBookingForm/Wor
 import { lightTheme, darkTheme } from './styles/theme';
 import ErrorBoundary from "./ErrorBoundary";
 import { AppContext } from './context/AppContext';
+import BookingDetails from "./pages/BookingDetails";
 
 function App() {
     const [data, setData] = useState(null);
@@ -39,6 +40,7 @@ function App() {
                 <AnimatePresence mode='wait'>
                     <Routes location={location} key={location.pathname}>
                         <Route path="/" element={<Home />} />
+                        <Route path="/:bookingId" element={<BookingDetails />} />
                     </Routes>
                 </AnimatePresence>
                 <Drawer isOpen={isDrawerOpen}>

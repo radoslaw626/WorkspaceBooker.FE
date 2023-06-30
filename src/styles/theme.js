@@ -107,7 +107,7 @@ const lightTheme = {
   invoiceDetails: {
     bg: '#FFFFFF'
   },
-  invoiceTable: {
+  bookingTable: {
     bg: '#F9FAFE',
     heading: '#7E88C3',
     footer: {
@@ -274,7 +274,7 @@ const darkTheme = {
   invoiceDetails: {
     bg: '#1E2139'
   },
-  invoiceTable: {
+  bookingTable: {
     bg: '#252945',
     heading: '#DFE3FA',
     footer: {
