@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1e071d7a-cbc5-4d9a-8648-b58b16d367ad" name="Changes" comment="moved react project up in folders to avoid nesting and problems with deploy">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ErrorBoundary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-arrow-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-moon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon-sun.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/illustration-empty.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image-avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CustomRadio.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DatePickerField.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Drawer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FilterDropdown.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/ThemeToggleButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NoWorkspaces.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TextField.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WorkspaceBookingForm/BookingForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WorkspaceBookingForm/WorkspaceBookingFormContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WorkspaceItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WorkspaceStatusBadge.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/AppContext.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowSize.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/MainContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/breakpoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/globalStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WorkspaceBooker.FE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/ErrorBoundary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-arrow-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-arrow-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-arrow-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-moon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/icon-sun.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/assets/illustration-empty.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/Button.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/CustomRadio.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/DatePickerField.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/Drawer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/FilterDropdown.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/Header/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/Header/ThemeToggleButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/NoWorkspaces.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/TextField.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/WorkspaceBookingForm/BookingForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/WorkspaceBookingForm/WorkspaceBookingFormContainer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/WorkspaceItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/components/WorkspaceStatusBadge.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/context/AppContext.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/hooks/useWindowSize.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/layout/MainContainer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/pages/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/styles/breakpoints.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/styles/globalStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/styles/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-booker-fe/src/utils/utils.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Rr04liAuMaN9XoByAcG2sBA0g5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.25280327&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/workspace-booker-fe/src/index.js" working-dir="$PROJECT_DIR$/workspace-booker-fe/src">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e071d7a-cbc5-4d9a-8648-b58b16d367ad" name="Changes" comment="" />
+      <created>1687992706369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687992706369</updated>
+      <workItem from="1687992707519" duration="5448000" />
+      <workItem from="1688018823132" duration="21863000" />
+      <workItem from="1688054906652" duration="8859000" />
+      <workItem from="1688080341673" duration="122000" />
+      <workItem from="1688105051832" duration="8372000" />
+      <workItem from="1688133674478" duration="381000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1687992862857</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687992862857</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added home page for listing mock data, configured theme with working motives, configured reducer">
+      <option name="closed" value="true" />
+      <created>1688035388992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688035388992</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated mock data, updated filter, added component for empty data">
+      <option name="closed" value="true" />
+      <created>1688054232718</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688054232718</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added reducer functions for CRUD, added drawer">
+      <option name="closed" value="true" />
+      <created>1688057172884</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688057172884</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added form for adding new bookings, added missing components for buttons, textboxes">
+      <option name="closed" value="true" />
+      <created>1688121009510</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688121009510</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="Added home page for listing mock data, configured theme with working motives, configured reducer" />
+    <MESSAGE value="updated mock data, updated filter, added component for empty data" />
+    <MESSAGE value="added reducer functions for CRUD, added drawer" />
+    <MESSAGE value="added form for adding new bookings, added missing components for buttons, textboxes" />
+    <MESSAGE value="moved react project up in folders to avoid nesting and problems with deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved react project up in folders to avoid nesting and problems with deploy" />
+  </component>
+</project>
