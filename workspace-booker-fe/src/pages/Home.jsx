@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import MainContainer from '../layout/MainContainer';
-import WorkspaceItem from '../components/InvoiceItem';
+import WorkspaceItem from '../components/WorkspaceItem';
 import FilterDropdown from '../components/FilterDropdown';
 import NoWorkspaces from '../components/NoWorkspaces';
 import Button from '../components/Button';
