@@ -17,6 +17,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import { AppContext } from './context/AppContext';
 import BookingDetails from "./pages/BookingDetails";
 import Workers from "./pages/Workers";
+import Workspaces from "./pages/Workspaces"
 
 function App() {
     const location = useLocation();
@@ -33,7 +34,8 @@ function App() {
                     <Routes location={location} key={location.pathname}>
                         <Route path="/" element={<Home />} />
                         <Route path="/:workspaceId" element={<BookingDetails />} />
-                        <Route path="/workers"element={<Workers/>} />
+                        <Route path="/workers" element={<Workers/>} />
+                        <Route path="/workspaces" element={<Workspaces/>} />
                     </Routes>
                 </AnimatePresence>
                 <Drawer isOpen={isDrawerOpen}>

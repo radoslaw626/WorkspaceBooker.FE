@@ -40,7 +40,7 @@ function Header() {
     <HeaderContainer>
         <WorkersLink  to="/"><FontAwesomeIcon icon={faHouse} style={{color: "#ffffff",}} /></WorkersLink>
         <WorkersLink to="/workers"><FontAwesomeIcon icon={faUser} style={{color: "#ffffff",}} /></WorkersLink>
-        <WorkersLink to="/workers"><FontAwesomeIcon icon={faDesktop} style={{color: "#ffffff",}} /></WorkersLink>
+        <WorkersLink to="/workspaces"><FontAwesomeIcon icon={faDesktop} style={{color: "#ffffff",}} /></WorkersLink>
       <ThemeToggleButton />
     </HeaderContainer>
   );

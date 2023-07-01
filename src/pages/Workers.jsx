@@ -129,32 +129,6 @@ function Workers() {
     return (
         <Container>
             <h2>Workers</h2>
-            {/*<Table>*/}
-            {/*    <thead>*/}
-            {/*    <tr>*/}
-            {/*        <th>Name</th>*/}
-            {/*        <th>Position</th>*/}
-            {/*        <th>Email</th>*/}
-            {/*        <th></th>*/}
-            {/*        <th></th>*/}
-            {/*    </tr>*/}
-            {/*    </thead>*/}
-            {/*    <tbody>*/}
-            {/*    {workers.map((worker) => (*/}
-            {/*        <tr key={worker.id}>*/}
-            {/*            <td>{worker.name}</td>*/}
-            {/*            <td>{worker.position}</td>*/}
-            {/*            <td>{worker.email}</td>*/}
-            {/*            <td>*/}
-            {/*                <Button onClick={() => handleSelect(worker)}>Edit</Button>*/}
-            {/*            </td>*/}
-            {/*            <td>*/}
-            {/*                <Button variant="contained" onClick={() => handleDelete(worker.id)}>Delete</Button>*/}
-            {/*            </td>*/}
-            {/*        </tr>*/}
-            {/*    ))}*/}
-            {/*    </tbody>*/}
-            {/*</Table>*/}
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>

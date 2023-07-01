@@ -92,7 +92,7 @@ function Home() {
     <MainContainer>
       <HomeHeader>
         <div>
-          <Heading>Workspaces</Heading>
+          <Heading>Workspaces Bookings</Heading>
           {<WorkspacesCount>{workspacesCountText(filteredWorkspaces.length)}</WorkspacesCount>}
         </div>
         <FilterDropdown />

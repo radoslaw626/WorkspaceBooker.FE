@@ -22,11 +22,11 @@ export function formatPrice(amount) {
 export function workspacesCountText(workspacesCount) {
   let msg;
   if (workspacesCount === 0) {
-    msg = 'No Workspaces';
+    msg = 'No Workspaces Bookings';
   } else if (workspacesCount === 1) {
-    msg = '1 Workspace';
+    msg = '1 Workspace Booking';
   } else {
-    msg = `${workspacesCount} Workspaces`;
+    msg = `${workspacesCount} Workspaces Bookings`;
   }
   return msg;
 }
