@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser} from '@fortawesome/free-solid-svg-icons'
 import { faHouse} from '@fortawesome/free-solid-svg-icons'
 import { faDesktop} from '@fortawesome/free-solid-svg-icons'
+import { faPlus} from '@fortawesome/free-solid-svg-icons'
 
 import deviceSize from '../../styles/breakpoints';
 
@@ -41,6 +42,7 @@ function Header() {
         <WorkersLink  to="/"><FontAwesomeIcon icon={faHouse} style={{color: "#ffffff",}} /></WorkersLink>
         <WorkersLink to="/workers"><FontAwesomeIcon icon={faUser} style={{color: "#ffffff",}} /></WorkersLink>
         <WorkersLink to="/workspaces"><FontAwesomeIcon icon={faDesktop} style={{color: "#ffffff",}} /></WorkersLink>
+        <WorkersLink to="/addworkspacebooking"><FontAwesomeIcon icon={faPlus} style={{color: "#ffffff",}} /></WorkersLink>
       <ThemeToggleButton />
     </HeaderContainer>
   );

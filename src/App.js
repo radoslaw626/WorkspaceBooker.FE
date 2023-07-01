@@ -18,6 +18,7 @@ import { AppContext } from './context/AppContext';
 import BookingDetails from "./pages/BookingDetails";
 import Workers from "./pages/Workers";
 import Workspaces from "./pages/Workspaces"
+import AddWorkspaceBooking from "./pages/AddWorkspaceBooking"
 
 function App() {
     const location = useLocation();
@@ -36,6 +37,7 @@ function App() {
                         <Route path="/:workspaceId" element={<BookingDetails />} />
                         <Route path="/workers" element={<Workers/>} />
                         <Route path="/workspaces" element={<Workspaces/>} />
+                        <Route path="/addworkspacebooking" element={<AddWorkspaceBooking/>} />
                     </Routes>
                 </AnimatePresence>
                 <Drawer isOpen={isDrawerOpen}>

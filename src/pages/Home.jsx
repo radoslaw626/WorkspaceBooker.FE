@@ -96,9 +96,9 @@ function Home() {
           {<WorkspacesCount>{workspacesCountText(filteredWorkspaces.length)}</WorkspacesCount>}
         </div>
         <FilterDropdown />
-        <NewBookingButton icon={true} onClick={() => dispatch({ type: OPEN_DRAWER })}>
-          New <span>Booking</span>
-        </NewBookingButton>
+        {/*<NewBookingButton icon={true} onClick={() => dispatch({ type: OPEN_DRAWER })}>*/}
+        {/*  New <span>Booking</span>*/}
+        {/*</NewBookingButton>*/}
       </HomeHeader>
       {filteredWorkspaces.length > 0 ? (
         <WorkspacesList

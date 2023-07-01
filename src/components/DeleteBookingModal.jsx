@@ -78,7 +78,7 @@ function DeleteBookingModal({ id, isOpen, closeModal }) {
               Return
             </Button>
             <Button variant="warning" onClick={deleteBooking}>
-              Cancel
+              Cancel Booking
             </Button>
           </ButtonContainer>
         </ModalContainer>
