@@ -70,7 +70,7 @@ const NewBookingPage = () => {
                     {workers.map(worker => <option key={worker.id} value={worker.id}>{worker.name} - {worker.email}</option>)}
                 </Select>
                 <Select value={selectedWorkspace} onChange={e => setSelectedWorkspace(e.target.value)}>
-                    {workspaces.map(workspace => <option key={workspace.id} value={workspace.workspace.id}>{workspace.workspace.code}</option>)}
+                    {workspaces.map(workspace => <option key={workspace.id} value={workspace.id}>{workspace.workspace.id}</option>)}
                 </Select>
                 <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
                 <DatePicker selected={endDate} onChange={date => setEndDate(date)} />
