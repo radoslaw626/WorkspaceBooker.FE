@@ -18,18 +18,9 @@ import { AppContext } from './context/AppContext';
 import BookingDetails from "./pages/BookingDetails";
 
 function App() {
-    const [data, setData] = useState(null);
     const location = useLocation();
     const { theme, isDrawerOpen } = useContext(AppContext);
 
-    // useEffect(() => {
-    //     fetch('https://workspacebooker.azurewebsites.net/api/workers')
-    //         .then((response) => response.json())
-    //         .then((data) => setData(data));
-    // }, []);
-    // if (data === null) {
-    //     return 'Loading...';
-    // }
 
     return (
         <div className="App">
@@ -40,7 +31,7 @@ function App() {
                 <AnimatePresence mode='wait'>
                     <Routes location={location} key={location.pathname}>
                         <Route path="/" element={<Home />} />
-                        <Route path="/:bookingId" element={<BookingDetails />} />
+                        <Route path="/:workspaceId" element={<BookingDetails />} />
                     </Routes>
                 </AnimatePresence>
                 <Drawer isOpen={isDrawerOpen}>

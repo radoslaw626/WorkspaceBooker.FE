@@ -102,15 +102,6 @@ function FilterDropdown() {
                   />
                   <CustomRadio
                     name="workspaces-filter"
-                    id="draft"
-                    label="Draft"
-                    value="draft"
-                    checked={filter === 'draft'}
-                    aria-checked={filter === 'draft' ? true : false}
-                    onChange={onChange}
-                  />
-                  <CustomRadio
-                    name="workspaces-filter"
                     id="free"
                     label="Free"
                     value="free"

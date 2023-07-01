@@ -92,8 +92,8 @@ function Home() {
     <MainContainer>
       <HomeHeader>
         <div>
-          <Heading>Workspaces Bookings</Heading>
-          <WorkspacesCount>{workspacesCountText(filteredWorkspaces.length)}</WorkspacesCount>
+          <Heading>Workspaces</Heading>
+          {<WorkspacesCount>{workspacesCountText(filteredWorkspaces.length)}</WorkspacesCount>}
         </div>
         <FilterDropdown />
         <NewBookingButton icon={true} onClick={() => dispatch({ type: OPEN_DRAWER })}>

@@ -87,13 +87,13 @@ const ArrowIcon = styled.div`
   }
 `;
 
-function WorkspaceItem({ clientName, description, id, paymentDue, status, total }) {
-  const formattedDueDate = `Due ${formatDate(paymentDue)}`;
+function WorkspaceItem({ worker, description, workspace, bookedDue, status }) {
+    const formattedDueDate = bookedDue ? `Due ${formatDate(bookedDue)}` : '';
   return (
-    <Wrapper to={id} aria-label={`${description} - ${clientName} - View Booking`}>
-      <WorkspaceId>{id}</WorkspaceId>
+    <Wrapper to={workspace.id} aria-label={`${description} - ${worker.name} - View Booking`}>
+      <WorkspaceId>{workspace.code}</WorkspaceId>
       <DueDate>{formattedDueDate}</DueDate>
-      <ClientName>{clientName}</ClientName>
+      <ClientName>{worker.name}</ClientName>
       <WorkspaceStatusBadge status={status} />
       <ArrowIcon>
         <IconArrowRight />

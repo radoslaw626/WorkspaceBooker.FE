@@ -111,11 +111,11 @@ const DetailsCardGrid = styled.div`
   }
 `;
 
-const InvoiceIdName = styled.div`
+const WorkspaceIdName = styled.div`
   display: block;
 `;
 
-const InvoiceID = styled.p`
+const WorkspaceID = styled.p`
   font-size: 0.75rem;
   font-weight: 700;
   color: ${({ theme }) => theme.text.h1};
@@ -131,7 +131,7 @@ const InvoiceID = styled.p`
   }
 `;
 
-const InvoiceName = styled.h1`
+const WorkerPosition = styled.h1`
   font-size: 0.75rem;
   font-weight: 500;
   margin: 0.25rem 0;
@@ -147,15 +147,15 @@ const SenderAddress = styled.address`
 `;
 
 function BookingDetails() {
-  const [booking, setBooking] = useState(null);
+  const [workspace, setWorkspace] = useState(null);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const { bookingId } = useParams();
+  const { workspaceId } = useParams();
   const { workspaces, dispatch } = useContext(AppContext);
 
   useEffect(() => {
-    const [currentBooking] = workspaces.filter((booking) => booking.id === bookingId);
-    setBooking(currentBooking);
-  }, [bookingId, workspaces]);
+    const [currentWorkspace] = workspaces.filter((workspace) => workspace.workspace.id === workspaceId);
+    setWorkspace(currentWorkspace);
+  }, [workspaceId, workspaces]);
 
   return (
     <MainContainer>
@@ -163,17 +163,17 @@ function BookingDetails() {
         <img src={IconArrowLeft} alt="" />
         Go back
       </BackButton>
-      {booking && (
+      {workspace && (
         <>
           <Header>
             <StatusLbl>Status</StatusLbl>
-            <WorkspaceStatusBadge status={booking.status} />
+            <WorkspaceStatusBadge status={workspace.status} />
             <BookingActions>
-              {booking.status !== 'booked' && (
+              {workspace.status !== 'booked' && (
                 <Button
                   variant="secondary"
                   aria-label="Edit Invoice"
-                  onClick={() => dispatch({ type: EDIT_WORKSPACE_BOOKING, payload: booking.id })}>
+                  onClick={() => dispatch({ type: EDIT_WORKSPACE_BOOKING, payload: workspace.id })}>
                   Edit
                 </Button>
               )}
@@ -185,44 +185,38 @@ function BookingDetails() {
               </Button>
             </BookingActions>
           </Header>
+          {workspace.status==='booked' && (
           <DetailsCard>
             <DetailsCardGrid>
-              <InvoiceIdName className="invoice-id-name">
-                <InvoiceID>{booking.id}</InvoiceID>
-                <InvoiceName>{booking.description}</InvoiceName>
-              </InvoiceIdName>
-              <SenderAddress className="sender-address">
-                {booking.senderAddress.street}
-                <br />
-                {booking.senderAddress.city}
-                <br />
-                {booking.senderAddress.postCode}
-                <br />
-                {booking.senderAddress.country}
-              </SenderAddress>
-              <div className="booking-dates">
-                <BookingInfo
-                  className="created-at"
-                  label="Booked From"
-                  value={formatDate(booking.createdAt)}
-                />
-                <BookingInfo
-                  className="payment-due"
-                  label="Booked Due"
-                  value={formatDate(booking.paymentDue)}
-                />
-              </div>
+              <WorkspaceIdName className="invoice-id-name">
+                <WorkspaceID>{workspace.workspace.code}</WorkspaceID>
+                <div className="booking-dates">
+                  <BookingInfo
+                      className="created-at"
+                      label="Booked From"
+                      value={workspace.bookedFrom ? formatDate(workspace.bookedFrom) : ''}
+                  />
+                  <BookingInfo
+                      className="payment-due"
+                      label="Booked Due"
+                      value={workspace.bookedDue ? formatDate(workspace.bookedDue) : ''}
+                  />
+                </div>
+              </WorkspaceIdName>
+
               <div className="client-name-address">
-                <BookingInfo className="client-name" label="Worker" value={booking.clientName} />
+                <BookingInfo className="client-name" label="Worker" value={workspace.worker.name} />
+                <BookingInfo className="client-name" label="Position" value={workspace.worker.position} />
+                <BookingInfo className="client-email" label="Email" value={workspace.worker.email} />
               </div>
-              <BookingInfo className="client-email" label="Email" value={booking.clientEmail} />
+
             </DetailsCardGrid>
-          </DetailsCard>
+          </DetailsCard>)}
         </>
       )}
-      {booking && (
+      {workspace && (
         <DeleteBookingModal
-          id={booking.id}
+          id={workspace.id}
           isOpen={isDeleteModalOpen}
           closeModal={() => setIsDeleteModalOpen(false)}
         />

@@ -66,7 +66,7 @@ const reducer = (state, action) => {
       });
       return {
         ...state,
-        invoices: newWorkspaces,
+        workspaces: newWorkspaces,
         filteredWorkspaces: newWorkspaces,
         isEditingInvoice: false,
         editInvoiceID: null,
@@ -81,9 +81,15 @@ const reducer = (state, action) => {
         isDrawerOpen: false
       };
     }
-    case LOAD_WORKSPACES_DATA: {
-      return { ...action.payload };
-    }
+    // case LOAD_WORKSPACES_DATA: {
+    //   return { ...action.payload };
+    // }
+    case LOAD_WORKSPACES_DATA:
+      return {
+        ...state,
+        workspaces: action.payload,
+        filteredWorkspaces: action.payload // lub filtrowane na podstawie innych kryteriów
+      };
     case ENABLE_DARK_MODE: {
       return { ...state, theme: 'dark' };
     }
