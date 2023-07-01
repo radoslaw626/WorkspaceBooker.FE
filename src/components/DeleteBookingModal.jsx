@@ -3,12 +3,11 @@ import { useContext } from 'react';
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
 import { Dialog } from '@headlessui/react';
+import axios from 'axios';
 
 import Button from './Button';
 
 import { AppContext } from '../context/AppContext';
-
-import { DELETE_WORKSPACE_BOOKING} from '../actions';
 
 const Overlay = styled(Dialog.Overlay)`
   position: fixed;
@@ -53,32 +52,37 @@ const ButtonContainer = styled.div`
 `;
 
 function DeleteBookingModal({ id, isOpen, closeModal }) {
-  const { dispatch } = useContext(AppContext);
   const navigate = useNavigate();
+  const { refreshWorkspaces } = useContext(AppContext);
 
-  const deleteBooking = () => {
-    dispatch({ type: DELETE_WORKSPACE_BOOKING, payload: id });
-    navigate('/');
+  const deleteBooking = async () => {
+    try {
+      await axios.delete(`https://workspacebooker.azurewebsites.net//api/workspace-bookings/${id}`);
+      refreshWorkspaces();
+      navigate('/');
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <Dialog open={isOpen} onClose={closeModal}>
-      <Overlay />
-      <ModalContainer>
-        <ModalHeading>Confirm Deletion</ModalHeading>
-        <ModalMessage>
-          Are you sure you want to delete booking #{id}? This action cannot be undone.
-        </ModalMessage>
-        <ButtonContainer>
-          <Button variant="secondary" onClick={closeModal}>
-            Cancel
-          </Button>
-          <Button variant="warning" onClick={deleteBooking}>
-            Delete
-          </Button>
-        </ButtonContainer>
-      </ModalContainer>
-    </Dialog>
+      <Dialog open={isOpen} onClose={closeModal}>
+        <Overlay />
+        <ModalContainer>
+          <ModalHeading>Confirm Cancellation</ModalHeading>
+          <ModalMessage>
+            Are you sure you want to cancel booking #{id}? This action cannot be undone.
+          </ModalMessage>
+          <ButtonContainer>
+            <Button variant="secondary" onClick={closeModal}>
+              Return
+            </Button>
+            <Button variant="warning" onClick={deleteBooking}>
+              Cancel
+            </Button>
+          </ButtonContainer>
+        </ModalContainer>
+      </Dialog>
   );
 }
 

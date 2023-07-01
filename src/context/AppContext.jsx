@@ -39,19 +39,20 @@ const AppProvider = ({ children }) => {
     })
   }, []);
 
+  const refreshWorkspaces = async () => {
+    const data = await fetchWorkspaces();
+    dispatch({ type: LOAD_WORKSPACES_DATA, payload: data });
+  };
 
-  // useEffect(() => {
-  //   if (localStorage.getItem('workspaces-app-data')) {
-  //     const appData = JSON.parse(localStorage.getItem('workspaces-app-data'));
-  //     dispatch({ type: LOAD_WORKSPACES_DATA, payload: appData });
-  //   }
-  // }, []);
+  useEffect(() => {
+    refreshWorkspaces();
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('workspaces-app-data', JSON.stringify(state));
   }, [state]);
 
-  return <AppContext.Provider value={{ ...state, dispatch }}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{ ...state, dispatch, refreshWorkspaces }}>{children}</AppContext.Provider>;
 };
 
 export { AppContext, AppProvider };

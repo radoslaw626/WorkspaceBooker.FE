@@ -190,20 +190,15 @@ function BookingDetails() {
             <StatusLbl>Status</StatusLbl>
             <WorkspaceStatusBadge status={workspace.status} />
             <BookingActions>
-              {workspace.status !== 'booked' && (
-                <Button
-                  variant="secondary"
-                  aria-label="Edit Invoice"
-                  onClick={() => dispatch({ type: EDIT_WORKSPACE_BOOKING, payload: workspace.id })}>
-                  Edit
-                </Button>
+              {workspace.status == 'booked' && (
+                  <Button
+                      variant="warning"
+                      aria-label="Delete Invoice"
+                      onClick={() => setIsDeleteModalOpen(true)}>
+                    Cancel Booking
+                  </Button>
               )}
-              <Button
-                variant="warning"
-                aria-label="Delete Invoice"
-                onClick={() => setIsDeleteModalOpen(true)}>
-                Cancel Booking
-              </Button>
+
             </BookingActions>
           </Header>
           {workspace.status==='booked' && (
