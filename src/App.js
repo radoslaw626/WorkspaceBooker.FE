@@ -16,6 +16,7 @@ import { lightTheme, darkTheme } from './styles/theme';
 import ErrorBoundary from "./ErrorBoundary";
 import { AppContext } from './context/AppContext';
 import BookingDetails from "./pages/BookingDetails";
+import Workers from "./pages/Workers";
 
 function App() {
     const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
                     <Routes location={location} key={location.pathname}>
                         <Route path="/" element={<Home />} />
                         <Route path="/:workspaceId" element={<BookingDetails />} />
+                        <Route path="/workers"element={<Workers/>} />
                     </Routes>
                 </AnimatePresence>
                 <Drawer isOpen={isDrawerOpen}>

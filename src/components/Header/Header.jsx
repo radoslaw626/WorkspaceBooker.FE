@@ -1,6 +1,10 @@
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 import ThemeToggleButton from './ThemeToggleButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser} from '@fortawesome/free-solid-svg-icons'
+import { faHouse} from '@fortawesome/free-solid-svg-icons'
+import { faDesktop} from '@fortawesome/free-solid-svg-icons'
 
 import deviceSize from '../../styles/breakpoints';
 
@@ -21,10 +25,22 @@ const HeaderContainer = styled.header`
   }
 `;
 
+const WorkersLink = styled(Link)`
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: ${({ theme }) => theme.button.bg};
+  color: ${({ theme }) => theme.button.text};
+  border-radius: 4px;
+  text-decoration: none;
+`;
 
 function Header() {
   return (
     <HeaderContainer>
+        <WorkersLink  to="/"><FontAwesomeIcon icon={faHouse} style={{color: "#ffffff",}} /></WorkersLink>
+        <WorkersLink to="/workers"><FontAwesomeIcon icon={faUser} style={{color: "#ffffff",}} /></WorkersLink>
+        <WorkersLink to="/workers"><FontAwesomeIcon icon={faDesktop} style={{color: "#ffffff",}} /></WorkersLink>
       <ThemeToggleButton />
     </HeaderContainer>
   );

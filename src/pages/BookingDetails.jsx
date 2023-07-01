@@ -148,9 +148,30 @@ const SenderAddress = styled.address`
 
 function BookingDetails() {
   const [workspace, setWorkspace] = useState(null);
+  const [bookingId, setBookingId] = useState(null);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const { workspaceId } = useParams();
   const { workspaces, dispatch } = useContext(AppContext);
+
+
+
+  useEffect(() => {
+    const fetchBookingId = async () => {
+      try {
+        const response = await fetch('https://workspacebooker.azurewebsites.net/api/workspace-bookings');
+        const data = await response.json();
+
+        const booking = data.find(booking => booking.workspaceId === workspaceId);
+        if (booking) {
+          setBookingId(booking.id);
+        }
+      } catch (error) {
+        console.error('Fetching error:', error);
+      }
+    };
+
+    fetchBookingId();
+  }, [workspaceId]);
 
   useEffect(() => {
     const [currentWorkspace] = workspaces.filter((workspace) => workspace.workspace.id === workspaceId);
@@ -181,7 +202,7 @@ function BookingDetails() {
                 variant="warning"
                 aria-label="Delete Invoice"
                 onClick={() => setIsDeleteModalOpen(true)}>
-                Delete
+                Cancel Booking
               </Button>
             </BookingActions>
           </Header>
@@ -216,7 +237,7 @@ function BookingDetails() {
       )}
       {workspace && (
         <DeleteBookingModal
-          id={workspace.id}
+          id={bookingId}
           isOpen={isDeleteModalOpen}
           closeModal={() => setIsDeleteModalOpen(false)}
         />
